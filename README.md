@@ -82,7 +82,7 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
   
 * Gentoo:
  ```bash
- sudo emerge -a dev-lang/python:3.10
+ sudo emerge -a dev-lang/python
  ```
  ```bash
  sudo emerge -a emerge dev-vcs/git
