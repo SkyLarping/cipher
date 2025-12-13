@@ -12,9 +12,9 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
 
 * Python **3.10+** (required for `match-case` syntax)
 
-## Installation:
+# Installation:
 
-# Linux
+## Linux
 * Python comes pre-installed in most distributions , but in case if you don't have it installed Follow the instructions :
 * To Install Libraries:
   
@@ -114,7 +114,7 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
   python3 cipher.py
   ```
   
-# UNIX Based Systems:
+## UNIX Based Systems:
 
 *FreeBSD/OpenBSD:
   ```bash
@@ -144,7 +144,7 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
   
 ---
 
-# Windows
+## Windows
 
 ```powershell
 git clone https://github.com/SkyLarping/cipher
