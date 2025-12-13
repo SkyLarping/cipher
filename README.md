@@ -7,7 +7,7 @@ Cipher Tool is a CLI Tool **command-line cryptography utility** written in Pytho
 The project is currently under developement **beta (v0.1.1)** and focuses on simplicity rather than advanced cryptographic security which will be added very soon.
 
 ---
- 
+
 ## Requirements
 
 * Python **3.10+** (required for `match-case` syntax)
@@ -18,7 +18,7 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
 * Python comes pre-installed in most distributions , but in case if you don't have it installed Follow the instructions :
 * To Install Libraries:
   
-* Debian/Ubuntu/Mint:
+* Debian/Ubuntu/Mint:![Debian](https://img.shields.io/badge/Distro-Debian-A81D33?logo=debian&logoColor=white)
   ```bash
   sudo apt install python3 && apt install git -y
   ```
