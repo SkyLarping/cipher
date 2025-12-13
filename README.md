@@ -1,4 +1,4 @@
-# Cipher Tool
+# Cipher Tool 🔐
 
 ## Overview
 
