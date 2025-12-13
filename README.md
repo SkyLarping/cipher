@@ -81,20 +81,21 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
   ```
   
 * Gentoo:
+
   ```bash
- sudo emerge -a dev-lang/python
+  sudo emerge -a dev-lang/python
   ```
   ```bash
- sudo emerge -a emerge dev-vcs/git
+  sudo emerge -a emerge dev-vcs/git
   ```
   ```bash
- git clone https://github.com/SkyLarping/cipher
+  git clone https://github.com/SkyLarping/cipher
   ```
   ```bash
- cd cipher
+  cd cipher
   ```
   ```bash
- python3 cipher.py
+  python3 cipher.py
   ```
 
 * Void:
