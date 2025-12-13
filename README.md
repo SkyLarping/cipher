@@ -19,8 +19,7 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
 * To Install Libraries:
   
 * Debian/Ubuntu/Mint:
-  `sudo apt install python3`
-  `sudo apt install git`
+  ```bassudo apt install pyth`3` `sudo apt install git`
   `git clone https://SkyLarping/cipher`
   `cd cipher`
   `python3 cipher.py`
@@ -77,7 +76,8 @@ The project is currently under developement **beta (v0.1.1)** and focuses on sim
 
 # Windows
 
-```git clone https://github.com/SkyLarping/cipher```c```cd cipher```
+```git clone https://github.com/SkyLarping/cipher```
+```cd cipher```
 
 ```powershell
 python cipher.py
