@@ -1,11 +1,17 @@
 # Cipher Tool (Updated) 🔐
 
-## Overview
+## 🏁 Overview
 
 -Cipher Tool is a CLI Tool **command-line cryptography utility** written in Python. It allows users to **encode and decode messages** using common encoding schemes. 
 -This tool is designed for educational purposes only, quick transformations, and lightweight usage directly from the terminal.
 -The project is currently under developement **Release Candidate (v0.2.0)** and focuses on simplicity rather than advanced cryptographic security which will be added very soon.
+
+
 <img width="1920" height="1080" alt="20251214_01h32m53s_grim" src="https://github.com/user-attachments/assets/7196a34b-aa73-4af2-a300-c407f3bb6d15" />
+
+## ✨ Example Usage:
+
+<img width="1920" height="1080" alt="20251214_01h35m38s_grim" src="https://github.com/user-attachments/assets/bd402647-21c3-4186-abd7-589e4b6d8086" />
 
 
 ---
