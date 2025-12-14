@@ -174,18 +174,18 @@ python cipher.py
 ---
 
 ## New Features:
-[✔️] Added Morse Code Support
-[✔️] Added Atbash Support
-[✔️] Added Binary Support
-[✔️] Added Caesar Support
-[✔️] Improved Interface and Error Handling
+- [✔️] Added Morse Code Support
+- [✔️] Added Atbash Support
+- [✔️] Added Binary Support
+- [✔️] Added Caesar Support
+- [✔️] Improved Interface and Error Handling
 
 ---
 ## Future Improvements:
-[⏲️] Adding more ciphers
-[⏲️] Adding an Interactive GUI
-[⏲️] Adding a Multi-Layer Encryption (Ex: Binary > Hex > Base64 > Rot13)
-[⏲️] Improving Error Handling
+- [⏲️] Adding more ciphers
+- [⏲️] Adding an Interactive GUI
+- [⏲️] Adding a Multi-Layer Encryption (Ex: Binary > Hex > Base64 > Rot13)
+- [⏲️] Improving Error Handling
 
 ---
 ## ⚠️ Disclaimer
@@ -195,7 +195,5 @@ This tool is intended for **educational and utility purposes only**. It should n
 ---
 
 ## Author
-Sky
-
 **Sky**
-Version: **v0.1.1 (beta)**
+Version: **v0.2.0 (RC)**
