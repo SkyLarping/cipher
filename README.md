@@ -1,18 +1,17 @@
-# Cipher Tool (Updated) 🔐
+# PyCipher (New Update v0.3.5) 🔐
 
 ## 🏁 Overview
 
- - Cipher Tool is a CLI Tool **command-line cryptography utility** written in Python. It allows users to **encode and decode messages** using common encoding schemes. 
- - This tool is designed for educational purposes only, quick transformations, and lightweight usage directly from the terminal.
- - The project is currently under developement **Release Candidate (v0.2.0)** and focuses on simplicity rather than advanced cryptographic security which will be added very soon.
+ - PyCipher is a CLI Tool **command-line cryptography utility** written in Python. It allows users to **encode and decode messages** using common encoding schemes. 
+ - *This tool is designed for educational purposes only* , quick transformations, and lightweight usage directly from the terminal.
 
+<img width="1920" height="1080" alt="20251214_17h23m32s_grim" src="https://github.com/user-attachments/assets/31b4f9ed-e028-4d83-9ba3-2f60da0f4796" />
 
-<img width="1920" height="1080" alt="20251214_01h32m53s_grim" src="https://github.com/user-attachments/assets/7196a34b-aa73-4af2-a300-c407f3bb6d15" />
+---
 
 ## ✨ Example Usage:
 
-<img width="1920" height="1080" alt="20251214_01h35m38s_grim" src="https://github.com/user-attachments/assets/bd402647-21c3-4186-abd7-589e4b6d8086" />
-
+<img width="1920" height="1080" alt="20251214_19h21m11s_grim" src="https://github.com/user-attachments/assets/de7f9092-4f3f-4635-9750-bc0147721d72" />
 
 ---
 
@@ -22,7 +21,7 @@
 * **Libraries**:
   - morse-talk
   - pycipher
-  - 
+     
 ## ⏩ Quick-Installation Tip:
   
   ```bash
@@ -37,11 +36,24 @@
   ```bash
   python3 cipher.py
   ```
+ - It's Highly Recommended to run any python program in a virtual env:
+
+   # MacOS/Linux/BSD:
+   ```bash
+   python3 -m venv <yourvenvname>
+   source <yourvenvname>/bin/activate
+   ```
+   # Windows
+   ```powershell
+   python3 -m venv <yourvenvname>
+   .<yourvenvname>/bin/activate
+   ```
+ ---
+ 
 ## Installation:
 # Linux:
 * Python comes pre-installed in most distributions , but in case if you don't have it installed Follow the instructions :
-* To Install Libraries:
-  
+*   
 * Debian/Ubuntu/Mint:
   ```bash
   sudo apt install python3 && apt install git -y
@@ -191,6 +203,7 @@ python cipher.py
 - Atbash
 - Binary
 - Caesar
+- Multi-Layered Encryption
 ---
 
 ## New Features:
@@ -199,14 +212,15 @@ python cipher.py
 - [✔️] Added Binary Support
 - [✔️] Added Caesar Support
 - [✔️] Improved Interface and Error Handling
+- [✔️] Added Multi-Layer Encryption
+- [✔️] Fixed Related Issues to Binary in Input
+- [✔️] Improved The Menu
 
 ---
 ## Future Improvements:
-- [⏲️] Adding more ciphers
+- [⏲️] Adding base8 and base32
 - [⏲️] Adding an Interactive GUI
-- [⏲️] Adding a Multi-Layer Encryption (Ex: Binary > Hex > Base64 > Rot13)
 - [⏲️] Improving Error Handling
-
 ---
 ## ⚠️ Disclaimer
 
@@ -215,5 +229,4 @@ This tool is intended for **educational and utility purposes only**. It should n
 ---
 
 ## Author
-**Sky**
-Version: **v0.2.0 (RC)**
+**SkyLarping**
