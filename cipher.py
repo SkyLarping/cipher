@@ -41,8 +41,8 @@ class Logo:
                             ||  8.        Caesar (DECODE)             ||
                             ||  9.        Morse  (ENCODE)             ||
                             || 10.        Morse  (DECODE)             ||
-                            || 11.        AtBash (ENCODE)             ||
-                            || 12.        AtBash (DECODE)             ||
+                            || 11.        AtBash (DECODE)             ||
+                            || 12.        AtBash (ENCODE)             ||
                             || 13.        Binary (ENCODE)             ||
                             || 14.        Binary (DECODE)             ||
                             || -------------------------------------- ||
