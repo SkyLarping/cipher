@@ -1,16 +1,20 @@
-# Cipher Tool 🔐
+# Cipher Tool (Updated) 🔐
 
 ## Overview
 
-Cipher Tool is a CLI Tool **command-line cryptography utility** written in Python. It allows users to **encode and decode messages** using common encoding schemes such as **Base64**, **Base16 (Hex)**, and **ROT13**. The tool is designed for educational purposes only, quick transformations, and lightweight usage directly from the terminal.
-
-The project is currently under developement **beta (v0.1.1)** and focuses on simplicity rather than advanced cryptographic security which will be added very soon.
+-Cipher Tool is a CLI Tool **command-line cryptography utility** written in Python. It allows users to **encode and decode messages** using common encoding schemes. 
+-This tool is designed for educational purposes only, quick transformations, and lightweight usage directly from the terminal.
+-The project is currently under developement **Release Candidate (v0.2.0)** and focuses on simplicity rather than advanced cryptographic security which will be added very soon.
 
 ---
 
 ## Requirements
 
 * Python **3.10+** (required for `match-case` syntax)
+* **Libraries**:
+  - morse-talk
+  - pycipher
+---
 
 # Installation:
 
@@ -159,8 +163,32 @@ python cipher.py
 ```
 
 ---
+## Features:
+- Base64
+- Base16
+- Rot13
+- Morse
+- Atbash
+- Binary
+- Caesar
+---
 
-## Disclaimer
+## New Features:
+[✔️] Added Morse Code Support
+[✔️] Added Atbash Support
+[✔️] Added Binary Support
+[✔️] Added Caesar Support
+[✔️] Improved Interface and Error Handling
+
+---
+## Future Improvements:
+[⏲️] Adding more ciphers
+[⏲️] Adding an Interactive GUI
+[⏲️] Adding a Multi-Layer Encryption (Ex: Binary > Hex > Base64 > Rot13)
+[⏲️] Improving Error Handling
+
+---
+## ⚠️ Disclaimer
 
 This tool is intended for **educational and utility purposes only**. It should not be used for secure communication or real cryptographic needs.
 
