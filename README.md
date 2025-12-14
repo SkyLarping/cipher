@@ -8,17 +8,29 @@
 
 ---
 
-## Requirements
+## ❗Requirements
 
 * Python **3.10+** (required for `match-case` syntax)
 * **Libraries**:
   - morse-talk
   - pycipher
----
-
-# Installation:
-
-## Linux
+  - 
+## ⏩ Quick-Installation Tip:
+  
+  ```bash
+  git clone https://github.com/SKyLarping/cipher
+  ```
+  ```bash
+  cd cipher
+  ```
+  ```bash
+  pip install -r requirements.txt
+  ```
+  ```bash
+  python3 cipher.py
+  ```
+## Installation:
+# Linux:
 * Python comes pre-installed in most distributions , but in case if you don't have it installed Follow the instructions :
 * To Install Libraries:
   
@@ -119,7 +131,7 @@
   python3 cipher.py
   ```
   
-## UNIX Based Systems:
+# UNIX Based Systems:
 
 *FreeBSD/OpenBSD:
   ```bash
@@ -149,7 +161,7 @@
   
 ---
 
-## Windows
+# Windows:
 
 ```powershell
 git clone https://github.com/SkyLarping/cipher
