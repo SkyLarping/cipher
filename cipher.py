@@ -1,81 +1,171 @@
 import base64 as b
 import codecs as c
+from pycipher import Caesar as C
+from pycipher import Atbash as at
+import morse_talk as m
 
-COLOR_1 = "\033[31m"
+COLOR_1 = "\033[35m"
 COLOR_2 = "\033[32m"
+COLOR_3 = "\033[33m"
 RESET   = "\033[0m"
 
 class Logo:
     def __init__(logo):
-        logo._ascii = fr"""{COLOR_1}
- ▄▄▄▄ ▓██   ██▓ ▄████▄   ██▓ ██▓███   ██░ ██ ▓█████  ██▀███  
-▓█████▄▒██  ██▒▒██▀ ▀█  ▓██▒▓██░  ██▒▓██░ ██▒▓█   ▀ ▓██ ▒ ██▒
-▒██▒ ▄██▒██ ██░▒▓█    ▄ ▒██▒▓██░ ██▓▒▒██▀▀██░▒███   ▓██ ░▄█ ▒
-▒██░█▀  ░ ▐██▓░▒▓▓▄ ▄██▒░██░▒██▄█▓▒ ▒░▓█ ░██ ▒▓█  ▄ ▒██▀▀█▄  
-░▓█  ▀█▓░ ██▒▓░▒ ▓███▀ ░░██░▒██▒ ░  ░░▓█▒░██▓░▒████▒░██▓ ▒██▒
-░▒▓███▀▒ ██▒▒▒ ░ ░▒ ▒  ░░▓  ▒▓▒░ ░  ░ ▒ ░░▒░▒░░ ▒░ ░░ ▒▓ ░▒▓░
-▒░▒   ░▓██ ░▒░   ░  ▒    ▒ ░░▒ ░      ▒ ░▒░ ░ ░ ░  ░  ░▒ ░ ▒░
- ░    ░▒ ▒ ░░  ░         ▒ ░░░        ░  ░░ ░   ░     ░░   ░ 
- ░     ░ ░     ░ ░       ░            ░  ░  ░   ░  ░   ░     
-      ░░ ░     ░                                             
-                                                                v0.1.1 (beta)
-                                                                Made by Sky{RESET}
+        logo._ascii = fr"""{COLOR_3}
+   ▄███████▄ ▄██   ▄    ▄████████    ▄████████ ▄██   ▄      ▄███████▄     ███        ▄████████    ▄████████ 
+  ███    ███ ███   ██▄ ███    ███   ███    ███ ███   ██▄   ███    ███ ▀█████████▄   ███    ███   ███    ███ 
+  ███    ███ ███▄▄▄███ ███    █▀    ███    ███ ███▄▄▄███   ███    ███    ▀███▀▀██   ███    █▀    ███    ███ 
+  ███    ███ ▀▀▀▀▀▀███ ███         ▄███▄▄▄▄██▀ ▀▀▀▀▀▀███   ███    ███     ███   ▀  ▄███▄▄▄      ▄███▄▄▄▄██▀ 
+▀█████████▀  ▄██   ███ ███        ▀▀███▀▀▀▀▀   ▄██   ███ ▀█████████▀      ███     ▀▀███▀▀▀     ▀▀███▀▀▀▀▀   
+  ███        ███   ███ ███    █▄  ▀███████████ ███   ███   ███            ███       ███    █▄  ▀███████████ 
+  ███        ███   ███ ███    ███   ███    ███ ███   ███   ███            ███       ███    ███   ███    ███ 
+ ▄████▀       ▀█████▀  ████████▀    ███    ███  ▀█████▀   ▄████▀         ▄████▀     ██████████   ███    ███ 
+                                    ███    ███                                                   ███    ███ 
+                                                                                         _______________________ 
+                                                                                        |      v0.2.0 (RC)      |
+                                                                                        |      Made by Sky      |
+                                                                                        |_______________________|
+                                                                                        {RESET}
 """
-
+        logo._menu = fr"""
+{COLOR_3}
+                            ||||||||||||||||||||||||||||||||||||||||||||
+                            || -------------- Options --------------- ||
+                            ||  1.        Base64 (DECODE)             ||
+                            ||  2.        Base64 (ENCODE)             ||
+                            ||  3.        Base16 (DECODE)             ||
+                            ||  4.        Base16 (ENCODE)             ||
+                            ||  5.        ROT13  (DECODE)             ||
+                            ||  6.        ROT13  (ENCODE)             ||
+                            ||  7.        Caesar (ENCODE)             ||
+                            ||  8.        Caesar (DECODE)             ||
+                            ||  9.        Morse  (ENCODE)             ||
+                            || 10.        Morse  (DECODE)             ||
+                            || 11.        AtBash (ENCODE)             ||
+                            || 12.        AtBash (DECODE)             ||
+                            || 13.        Binary (ENCODE)             ||
+                            || 14.        Binary (DECODE)             ||
+                            || -------------------------------------- ||
+                            ||||||||||||||||||||||||||||||||||||||||||||
+{RESET}
+"""
 l = Logo()
+
 print(l._ascii)
+print((l._menu))
 
 try:
-
-    option = int(input(f"{COLOR_2}Options :\n\n1)Decoding a base64\n\n2)Encoding a base64\n\n3)Decoding a base16\n\n4)Encoding to base16\n\n5)Decoding a rot13\n\n6)Encoding to rot13\n\n[cipher]:  "))
-
+    option = int(input(f"{COLOR_3}[pycipher]: "))
 except KeyboardInterrupt:
-    print("[-] Exiting")
+    print("\n[x] Exiting")
 
 match option:
 
     case 1:
-       try:
-            msg = input("[+] Type your encrypted message : ")
-            decoded = b.b64decode(msg)
-            print(f"[+] Your message is {decoded}")
+        try:
+                msg = input("> [Type your base64] : ")
+                decoded = b.b64decode(msg)
+                print(f"> Your message is {decoded}")
 
-       except KeyboardInterrupt:
-            print("\n[-] Exiting")
+        except KeyboardInterrupt:
+                print("\n[x] Exiting")
     case 2:
         try:
-            msg_1 = input("[+] Type your message : ").encode()
-            encoded = b.b64encode(msg_1)
-            print(f"[+] Your encrypted message is {encoded}")
+                msg = input("> [Type your message] : ").encode()
+                encoded = b.b64encode(msg).decode()
+                print(f"> Your base64 is {encoded}")
         except KeyboardInterrupt:
-            print("\n[-] Exiting")
-    case 3:
+                print("\n[x] Exiting")
+
+    case 3:    
         try:
-            msg_2 = input("[+] Type your cipher : ")
-            decoded_hex = b.b16decode(msg_2).decode()
-            print(f"[+] Your decrypted message is : {decoded_hex}")
+            msg = input("> [Type your base16] : ")
+            decoded_hex = b.b16decode(msg).decode()
+            print(f"> Your message is : {decoded_hex}")
         except KeyboardInterrupt:
-            print("\n[-] Exiting")
+            print("\n[x] Exiting")
+        
     case 4:
         try:
-            msg_3 = input("[+] Type your message : ").encode()
-            encoded_hex = b.b16encode(msg_3)
-            print(f"[+] Your encrypted message is {encoded_hex} ")
+            msg = input("> [Type your message] : ").encode()
+            encoded_hex = b.b16encode(msg).decode()
+            print(f"> Your base16 is {encoded_hex} ")
         except KeyboardInterrupt:
-            print("\n[-] Exiting")
-    case 5:
+            print("\n[x] Exiting")
+    case 5:        
         try:
-            msg_4 = input("[+] Type your cipher : ")
-            decoded_rot = c.decode(msg_4, 'rot13')
-            print(f"[+] Your decrypted cypher is: {decoded_rot}")
+                msg = input("> [Type your rot13] : ")
+                decoded_rot = c.decode(msg, 'rot13')
+                print(f"> Your decrypted rot13 is: {decoded_rot}")
         except KeyboardInterrupt:
-            print("\n[-] Exiting")
+                print("\n[x] Exiting")
     case 6:
         try:
-            msg_5 = input("[+] Type your message : ")
-            encoded_rot = c.encode(msg_5, 'rot13')
-            print(f"[+] Your encrypted message is: {encoded_rot}")
+                msg = input("> [Type your message] : ")
+                encoded_rot = c.encode(msg, 'rot13')
+                print(f"> Your rot13 is: {encoded_rot}")
         except KeyboardInterrupt:
-            print("\n[-] Exiting")
+                print("\n[x] Exiting")
+    case 7:
+        try:    
+                shift = int(input("> How many shifts: "))
+                msg = input("> [Type your message] : ")
+                encoded_c = C(shift).encipher(msg)
+                print(f"> Your caesar cipher is {encoded_c}")
+        except KeyboardInterrupt:
+             print("\n[x] Exiting")
+    case 8:
+        try:
+                shift = int(input("> How many shifts: "))
+                msg = input("> [Type your caesar]: ")
+                decoded_c = C(shift).decipher(msg)
+                print(f"> Your message is {decoded_c}")
+        except KeyboardInterrupt:
+             print("\n[x] Exiting")
+    case 9:
+        try:
+                msg = input("> [Type your message] : ")
+                encoded_m = m.encode(msg)
+                print(f"> Your morse code is: {encoded_m}")
+        except KeyboardInterrupt:
+             print("\n[x] Exiting")
+    case 10:
+        try:
+                msg = input("> [Type your morse code] : ")
+                decoded_m = m.decode(msg)
+                print(f"> Your message is : {decoded_m}")
+        except KeyboardInterrupt:
+             print("\n[x] Exiting")
+    case 11:
+        try:
+                msg = input("> [Type your atbash code] : ")
+                decoded_a = at().decipher(msg)
+                print(f"> Your message is : {decoded_a} ")
+        except KeyboardInterrupt:
+             print("\n[x] Exiting")
+    case 12:
+        try:
+                msg = input("> [Type your message] : ")
+                encoded_a = at().encipher(msg)
+                print(f"> Your atbash is : {encoded_a}")
+        except KeyboardInterrupt:
+             print("\n[x] Exiting")
+    case 13:
+        try:
+                msg = input("> [Type your message] : ")
+                encoded_b = "".join([bin((ord(msg))).removeprefix('0b') + " " for msg in msg])
+                print(f"Your encoded message to binary : {encoded_b}")
+        except KeyboardInterrupt:
+              print("\n[x] Exiting") 
+    case 14:
+        try:
+                msg = input('> [Type your binaries] : ')
+                if len(msg) % 8 == 0:
+                   decoded_b = ''.join((chr(int(msg[i:i+8], 2))) for i in range(0,len(msg), 8))
+                   print(f"Your decoded message is: {decoded_b}")
+                else:
+                    raise ValueError("[x] string Must be a Multiple of 8")
+        except KeyboardInterrupt:
+            print("\n[x] Exiting")
     case _:
-        print("[-] Invalid Option, Try Again")
+        print("[x] Invalid Option, Try Again")
