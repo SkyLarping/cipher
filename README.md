@@ -3,7 +3,7 @@
 ## 🏁 Overview
 
  - PyCipher is a CLI Tool **command-line cryptography utility** written in Python. It allows users to **encode and decode messages** using common encoding schemes. 
- - *This tool is designed for educational purposes only* , quick transformations, and lightweight usage directly from the terminal.
+ - *This tool is designed for educational purposes only and for basic usage , security is not guarranted , as the tool is only for experimental and CTF use* , quick transformations, and lightweight usage directly from the terminal.
 
 <img width="1920" height="1080" alt="20251214_17h23m32s_grim" src="https://github.com/user-attachments/assets/31b4f9ed-e028-4d83-9ba3-2f60da0f4796" />
 
@@ -211,7 +211,7 @@ python cipher.py
 - [✔️] Added Atbash Support
 - [✔️] Added Binary Support
 - [✔️] Added Caesar Support
-- [✔️] Improved Interface and Error Handling
+- [✔️] Improved Interface
 - [✔️] Added Multi-Layer Encryption
 - [✔️] Fixed Related Issues to Binary in Input
 - [✔️] Improved The Menu
@@ -221,11 +221,6 @@ python cipher.py
 - [⏲️] Adding base8 and base32
 - [⏲️] Adding an Interactive GUI
 - [⏲️] Improving Error Handling
----
-## ⚠️ Disclaimer
-
-This tool is intended for **educational and utility purposes only**. It should not be used for secure communication or real cryptographic needs.
-
 ---
 
 ## Author
